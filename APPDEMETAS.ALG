@@ -1,30 +1,38 @@
-algoritmo "SomaDeMeta"
+algoritmo "SomaDeMetaPratico"
 
 var
-     etapasConvertida, soma: real
-     etapas, i: inteiro
-     min, seg: inteiro
-    
+    etapasConvertida, soma,meta: real
+    etapas, i: inteiro
+    min, seg: inteiro
+    nomeDaEtapa: caractere
 
 inicio
-soma <- 0
-Escreva("Quantas Etapas são:")
-Leia(etapas)
+    soma <- 0
+    Escreva("Quantas etapas sÃ£o?")
+    Leia(etapas)
 
-    Para i <- 1 até etapas faça
-        Escreva("Digite os minutos da etapa", i, ": ")
-        Leia (min)
-        Escreval("Digite os segundos da etapa", i, ": ")
-        Leia (seg)
-        
-        // Conversão:minutos (segundos/60)
+    Para i <- 1 atÃ© etapas faÃ§a
+        Escreva("Digite o nome da etapa ", i, ": ")
+        Leia(nomeDaEtapa)
+
+        Escreva("Digite os minutos da etapa ", i, ": ")
+        Leia(min)
+
+        Escreva("Digite os segundos da etapa ", i, ": ")
+        Leia(seg)
+
+        // ConversÃ£o: minutos + segundos/60
         etapasConvertida <- min + (seg / 60)
-    
+
         // Soma acumulada
-        soma <- soma + etapasconvertida
-          
+        soma <- soma + etapasConvertida
+        
+    FimPara
     
-Fimpara
+        //Calcular a meta usando o tempo total
+        meta <- Arred(60 / soma)
+
+        Escreva("A meta serÃ¡: ", meta)
 
     
         
